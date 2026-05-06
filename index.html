@@ -76,11 +76,35 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
 <script>
+<script>
 const firebaseConfig = {
   apiKey: "AIzaSyBZgmeqA0OxYmZdclVo3ZyXNp5lPdRqjS4",
   authDomain: "scribe-ca762.firebaseapp.com",
-  projectId: "scribe-ca762"
+  projectId: "scribe-ca762",
+  appId: "1:384222584586:web:816dd18ed8e74acf65e4f3"
 };
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+function signup() {
+  const email = prompt("Enter email:");
+  const password = prompt("Enter password");
+
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(() => alert("Account created"))
+    .catch(err => alert(err.message));
+}
+
+function login() {
+  const email = prompt("Enter email:");
+  const password = prompt("Enter password");
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => alert("Logged in"))
+    .catch(err => alert(err.message));
+}
+</script>
 
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
