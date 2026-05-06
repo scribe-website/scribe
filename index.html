@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scribe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-900 to-blue-400 text-white font-sans">
+
+<!-- Navbar -->
+<nav class="flex justify-between items-center p-6">
+  <h1 class="text-2xl font-bold">Scribe</h1>
+  <div>
+    <button class="px-4 py-2 bg-white text-blue-600 rounded-lg">Login</button>
+    <button class="px-4 py-2 bg-blue-600 rounded-lg">Sign Up</button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="h-screen flex flex-col justify-center items-center text-center">
+  <h2 class="text-5xl font-bold mb-4">Find Help. Earn Smart.</h2>
+  <p class="text-lg mb-6">Connect with students. Share work. Grow together.</p>
+  <button class="bg-white text-blue-700 px-6 py-3 rounded-xl">Get Started</button>
+</section>
+
+<!-- Slides -->
+<section class="p-10 space-y-10">
+
+  <div class="bg-white text-blue-900 rounded-2xl p-8 shadow-lg">
+    <h3 class="text-2xl font-bold mb-2">Create Account</h3>
+    <p>Sign up and join the Scribe community.</p>
+  </div>
+
+  <div class="bg-blue-800 rounded-2xl p-8 shadow-lg">
+    <h3 class="text-2xl font-bold mb-2">Find Work</h3>
+    <p>Browse tasks posted by other students.</p>
+  </div>
+
+  <div class="bg-white text-blue-900 rounded-2xl p-8 shadow-lg">
+    <h3 class="text-2xl font-bold mb-2">Upload Task</h3>
+    <p>Upload your assignment and get help.</p>
+  </div>
+
+</section>
+
+<!-- Upload Section -->
+<section class="bg-white text-blue-900 p-10 m-10 rounded-2xl">
+  <h2 class="text-3xl font-bold mb-4">Upload Your Work</h2>
+
+  <input type="text" placeholder="Title" class="w-full p-3 border mb-3 rounded">
+
+  <select class="w-full p-3 border mb-3 rounded">
+    <option>Select Type</option>
+    <option>PPT</option>
+    <option>Document</option>
+    <option>Homework</option>
+    <option>Class Work</option>
+    <option>Assignment</option>
+  </select>
+
+  <textarea placeholder="Describe your work" class="w-full p-3 border mb-3 rounded"></textarea>
+
+  <input type="file" class="mb-3">
+
+  <button class="bg-blue-600 text-white px-6 py-2 rounded-lg">Submit</button>
+</section>
+
+<!-- Footer -->
+<footer class="text-center p-6 text-sm opacity-70">
+  © 2026 Scribe
+</footer>
+
+</body>
+</html>
