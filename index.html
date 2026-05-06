@@ -13,8 +13,9 @@
 <nav class="flex justify-between items-center p-6">
   <h1 class="text-2xl font-bold">Scribe</h1>
   <div>
-    <button class="px-4 py-2 bg-white text-blue-600 rounded-lg">Login</button>
-    <button class="px-4 py-2 bg-blue-600 rounded-lg">Sign Up</button>
+   <button onclick="login()" class="px-4 py-2 bg-white text-blue-600 rounded-lg">Login</button>
+
+<button onclick="signup()" class="px-4 py-2 bg-blue-600 rounded-lg">Sign Up</button>
   </div>
 </nav>
 
@@ -71,6 +72,36 @@
 <footer class="text-center p-6 text-sm opacity-70">
   © 2026 Scribe
 </footer>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBZgmeqA0OxYmZdclVo3ZyXNp5lPdRqjS4",
+  authDomain: "scribe-ca762.firebaseapp.com",
+  projectId: "scribe-ca762"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+function signup() {
+  const email = prompt("Enter email:");
+  const password = prompt("Enter password");
+
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(() => alert("Account created"))
+    .catch(err => alert(err.message));
+}
+
+function login() {
+  const email = prompt("Enter email:");
+  const password = prompt("Enter password");
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => alert("Logged in"))
+    .catch(err => alert(err.message));
+}
+</script>
 </body>
 </html>
