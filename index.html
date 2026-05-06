@@ -13,122 +13,18 @@
 <nav class="flex justify-between items-center p-6">
   <h1 class="text-2xl font-bold">Scribe</h1>
   <div>
-   <button onclick="login()" class="px-4 py-2 bg-white text-blue-600 rounded-lg">Login</button>
-
-<button onclick="signup()" class="px-4 py-2 bg-blue-600 rounded-lg">Sign Up</button>
+    <button onclick="login()" class="px-4 py-2 bg-white text-blue-600 rounded-lg">Login</button>
+    <button onclick="signup()" class="px-4 py-2 bg-blue-600 rounded-lg">Sign Up</button>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="h-screen flex flex-col justify-center items-center text-center">
   <h2 class="text-5xl font-bold mb-4">Find Help. Earn Smart.</h2>
   <p class="text-lg mb-6">Connect with students. Share work. Grow together.</p>
-  <button class="bg-white text-blue-700 px-6 py-3 rounded-xl">Get Started</button>
 </section>
 
-<!-- Slides -->
-<section class="p-10 space-y-10">
-
-  <div class="bg-white text-blue-900 rounded-2xl p-8 shadow-lg">
-    <h3 class="text-2xl font-bold mb-2">Create Account</h3>
-    <p>Sign up and join the Scribe community.</p>
-  </div>
-
-  <div class="bg-blue-800 rounded-2xl p-8 shadow-lg">
-    <h3 class="text-2xl font-bold mb-2">Find Work</h3>
-    <p>Browse tasks posted by other students.</p>
-  </div>
-
-  <div class="bg-white text-blue-900 rounded-2xl p-8 shadow-lg">
-    <h3 class="text-2xl font-bold mb-2">Upload Task</h3>
-    <p>Upload your assignment and get help.</p>
-  </div>
-
-</section>
-
-<!-- Upload Section -->
-<section class="bg-white text-blue-900 p-10 m-10 rounded-2xl">
-  <h2 class="text-3xl font-bold mb-4">Upload Your Work</h2>
-
-  <input type="text" placeholder="Title" class="w-full p-3 border mb-3 rounded">
-
-  <select class="w-full p-3 border mb-3 rounded">
-    <option>Select Type</option>
-    <option>PPT</option>
-    <option>Document</option>
-    <option>Homework</option>
-    <option>Class Work</option>
-    <option>Assignment</option>
-  </select>
-
-  <textarea placeholder="Describe your work" class="w-full p-3 border mb-3 rounded"></textarea>
-
-  <input type="file" class="mb-3">
-
-  <button class="bg-blue-600 text-white px-6 py-2 rounded-lg">Submit</button>
-</section>
-
-<!-- Footer -->
-<footer class="text-center p-6 text-sm opacity-70">
-  © 2026 Scribe
-</footer>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-
-<script>
-<script>
-const firebaseConfig = {
-  apiKey: "AIzaSyBZgmeqA0OxYmZdclVo3ZyXNp5lPdRqjS4",
-  authDomain: "scribe-ca762.firebaseapp.com",
-  projectId: "scribe-ca762",
-  appId: "1:384222584586:web:816dd18ed8e74acf65e4f3"
-};
-
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-function signup() {
-  const email = prompt("Enter email:");
-  const password = prompt("Enter password");
-
-  auth.createUserWithEmailAndPassword(email, password)
-    .then(() => alert("Account created"))
-    .catch(err => alert(err.message));
-}
-
-function login() {
-  const email = prompt("Enter email:");
-  const password = prompt("Enter password");
-
-  auth.signInWithEmailAndPassword(email, password)
-    .then(() => alert("Logged in"))
-    .catch(err => alert(err.message));
-}
-</script>
-
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-function signup() {
-  const email = prompt("Enter email:");
-  const password = prompt("Enter password");
-
-  auth.createUserWithEmailAndPassword(email, password)
-    .then(() => alert("Account created"))
-    .catch(err => alert(err.message));
-}
-
-function login() {
-  const email = prompt("Enter email:");
-  const password = prompt("Enter password");
-
-  auth.signInWithEmailAndPassword(email, password)
-    .then(() => alert("Logged in"))
-    .catch(err => alert(err.message));
-}
-</script>
-</body>
-</html>
+<!-- Firebase Scripts -->
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
@@ -163,3 +59,6 @@ function login() {
     .catch(err => alert(err.message));
 }
 </script>
+
+</body>
+</html>
